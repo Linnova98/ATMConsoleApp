@@ -59,6 +59,29 @@ public class Display
             PrintOptions();
             int option = 0;
     }
+
+    public static void RunOtherShit()
+    {
+        while (true)
+        {
+            PrintOptions();
+            Console.WriteLine("noe her");
+            int idk = Convert.ToInt32(Console.ReadLine());
+
+            switch (idk)
+            {
+                case 1 :
+                    Console.WriteLine(); 
+                    break;
+                case 2:
+                    Console.WriteLine();
+                    break;
+                default: 
+                    break;
+            }
+
+        }
+    }
     public static void PrintOptions()
     {
         Console.WriteLine("Please choose from one of the following options...");
@@ -67,4 +90,6 @@ public class Display
         Console.WriteLine("3. Show Balance");
         Console.WriteLine("4. Exit");
     }
+
+
 }
