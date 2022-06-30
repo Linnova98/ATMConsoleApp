@@ -7,117 +7,101 @@ public class Program
 {
     public static void Main(String[] args)
     {
-        CustomerDatabase.MakeHolders();
-        StartATM();
+        //var disp = new Display();
+
+        Display.runShit();
+
+        //Console.WriteLine(disp);
+
+        /*
+ 
+         //Prompt user
+         Console.WriteLine("Welcome to SimpleATM");
+         Console.WriteLine("Please insert your debit card: ");
+         string debitCardNum = "";
+         CardHolder currentUser = null;
+ 
+ 
+         while (currentUser == null)
+         {
+             debitCardNum = Console.ReadLine();
+ 
+ 
+             for (int i = 0; i < CustomerDatabase.CardHolders.Count; i++)
+             {
+                 if (CustomerDatabase.CardHolders[i].CardNum == debitCardNum)
+                 {
+                     currentUser = CustomerDatabase.CardHolders[i];
+                     break;
+                 }
+                 
+             }
+ 
+             if (currentUser == null)
+             {
+                 Console.WriteLine("Card not recognized. Please try again");
+             }
+             
+         }
+         
+         Console.WriteLine("Please enter your pin: ");
+         int userPin = 0;
+         bool pinIsWrong = true;
+         while (pinIsWrong)
+         {
+             userPin = Convert.ToInt32(Console.ReadLine());
+             if (currentUser.Pin == userPin){
+                 Console.WriteLine($"Welcome {currentUser.FirstName} :)");
+                 pinIsWrong = false;
+             }
+             else
+             {
+                 Console.WriteLine("Pin not recognized. Please try again");
+             }
+         }
+ 
+         Display.PrintOptions();
+         int option = 0;
+         
+ 
+     }
+ 
+ 
+ */
 
 
-        switch ()
+        /*public static void StartATM()
         {
-            case: "1"
-        }
-
-
-    }
-
-
-
-
-
-    public static void StartATM()
-    {
-        //Prompt user
-        Console.WriteLine("Welcome to SimpleATM");
-        Console.WriteLine("Please insert your debit card: ");
-        String debitCardNum = "";
-        CardHolder currentUser;
-
-        while (true)
-        {
-            try
+            int option = 0;
+            do
             {
-                debitCardNum = Console.ReadLine();
-                // Check against our db
-                currentUser = cardHolders.FirstOrDefault(a => a.CardNum == debitCardNum);
-                if (currentUser != null)
+                printOptions();
+                try
+                {
+                    option = int.Parse(Console.ReadLine());
+                }
+                catch { }
+                if(option == 1)
+                {
+                    deposit(currentUser);
+    
+                }
+                else if(option == 2){ withdraw(currentUser); }
+                else if (option == 3) { balance(currentUser); }
+                else if (option == 4)
                 {
                     break;
                 }
                 else
                 {
-                    Console.WriteLine("Card not recognized. Please try again");
+                    option = 0;
+    
                 }
-
-            }
-            catch
-            {
-                Console.WriteLine("Card not recognized. Please try again");
-            }
-
-        }
-
-
-
-
-
-
-
-
-
-        Console.WriteLine("Please enter your pin: ");
-        int userPin = 0;
-        while (true)
-        {
-            try
-            {
-                userPin = int.Parse(Console.ReadLine());
-                // Check against our db
-                
-                if (currentUser.GetPin() == userPin)
-                {
-                    break;
-                }
-                else
-                {
-                    Console.WriteLine("Incorrect pin. Please try again");
-                }
-
-            }
-            catch
-            {
-                Console.WriteLine("Incorrect pin. Please try again");
-            }
-        }
-
-        Console.WriteLine("Welcome " + currentUser.GetFirstName() + " :)");
-        int option = 0;
-        do
-        {
-            printOptions();
-            try
-            {
-                option = int.Parse(Console.ReadLine());
-            }
-            catch { }
-            if(option == 1)
-            {
-                deposit(currentUser);
-
-            }
-            else if(option == 2){ withdraw(currentUser); }
-            else if (option == 3) { balance(currentUser); }
-            else if (option == 4)
-            {
-                break;
-            }
-            else
-            {
-                option = 0;
-
-            }
-
-
-        } while (option != 4);
-
-        Console.WriteLine("Thank you! Have a nice day :)");
+    
+    
+            } while (option != 4);
+    
+            Console.WriteLine("Thank you! Have a nice day :)");
+        }*/
     }
 }
