@@ -4,7 +4,7 @@ public class ATM
 {
     public List<CardHolder> CardHolders { get; set; }
 
-    public ATM(List<CardHolder> cardHolders)
+    public ATM(List<CardHolder> cardHolderscardHolders)
     {
        CardHolders = cardHolders;
     }
@@ -19,6 +19,7 @@ public class ATM
         Console.WriteLine("3. Show Balance");
         Console.WriteLine("4. Exit");
     }
+
     void deposit(CardHolder currentUser)
     {
         Console.WriteLine("How much $$ would you like to deposit?");
