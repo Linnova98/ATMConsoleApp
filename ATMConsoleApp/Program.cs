@@ -10,6 +10,7 @@ public class Program
         //var disp = new Display();
 
         Display.runShit();
+        Display.CheckShit();
 
         //Console.WriteLine(disp);
 

@@ -2,6 +2,9 @@
 
 public class Display
 {
+    //public static CardHolder currentUser { get; set; }
+    public static CardHolder currentUser = null;
+
     public static void runShit()
     {
         List<CardHolder> CardHolders = new List<CardHolder>();
@@ -14,7 +17,7 @@ public class Display
         Console.WriteLine("Welcome to SimpleATM");
         Console.WriteLine("Please insert your debit card: ");
         string debitCardNum = "";
-        CardHolder currentUser = null;
+        currentUser = null;
 
 
         while (currentUser == null)
@@ -58,8 +61,16 @@ public class Display
 
             PrintOptions();
             int option = 0;
+
+        //return currentUser;
     }
 
+
+    public static void CheckShit()
+    {
+        Console.Write("HER ER NAVNET::-------");
+        Console.Write(currentUser.FirstName);
+    }
     public static void RunOtherShit()
     {
         while (true)
@@ -67,11 +78,11 @@ public class Display
             PrintOptions();
             Console.WriteLine("noe her");
             int idk = Convert.ToInt32(Console.ReadLine());
-
+            
             switch (idk)
             {
                 case 1 :
-                    Console.WriteLine(); 
+                    ATM.Deposit(currentUser);
                     break;
                 case 2:
                     Console.WriteLine();
